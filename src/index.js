@@ -1,9 +1,27 @@
+function refreshTemperature(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let temperature = Math.round(response.data.temperature.current);
+  let cityElement = document.querySelector("#city");
+
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = temperature;
+}
+
+function searchCity(city) {
+  let key = "caccbbtca33o481dda0074f34f777ffb";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(refreshTemperature);
+}
+
 function handleSearch(event) {
   event.preventDefault();
   let searchValue = document.querySelector("#search-value");
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = searchValue.value;
+
+  searchCity(searchValue.value);
 }
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
+
+searchCity("Paris");
