@@ -3,40 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather Search Project</title>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <header>
-      <input type="search" placeholder="Enter a city" required />
-      <input type="submit" value="Search" />
-    </header>
-    <hr />
-    <main>
-      <div>
-        <h1>Paris</h1>
-        <p>
-          Saturday 20:05, clear sky <br />
-          Humidity: 37%, Wind: 4.12km/h
-        </p>
-      </div>
-      <div>🏙 20ºC</div>
-    </main>
-    <hr />
-    <footer>
-      Coded by
-      <a href="https://github.com/aluciadio" target="_blank">
-        Ana Lúcia Dionísio</a
-      >
-      hosted on
-      <a
-        href="https://github.com/aluciadio/weather-search-project"
-        target="_blank"
-        >Github</a
-      >
-      and website hosted on
-      <a href="https://weather-metereologia.netlify.app" target="_blank">
-        Netlify</a
-      >
-    </footer>
+    <div class="weather-app">
+      <header>
+        <input
+          type="search"
+          placeholder="Enter a city"
+          required
+          class="search-value"
+        />
+        <input type="submit" value="Search" class="submit-button" />
+      </header>
+      <hr />
+      <main>
+        <div class="weather-on-the-day">
+          <div>
+            <h1>Paris</h1>
+            <p>
+              Saturday 20:05, clear sky <br />
+              Humidity: 37%, Wind: 4.12km/h
+            </p>
+          </div>
+          <div class="weather-today">
+            <div class="emoji-weather">🏙</div>
+            <div class="weather-temperature">20</div>
+            <div class="weather-symbol">ºC</div>
+          </div>
+        </div>
+      </main>
+      <hr />
+      <footer>
+        Coded by
+        <a href="https://github.com/aluciadio" target="_blank">
+          Ana Lúcia Dionísio</a
+        >
+        hosted on
+        <a
+          href="https://github.com/aluciadio/weather-search-project"
+          target="_blank"
+          >Github</a
+        >
+        and website hosted on
+        <a href="https://weather-metereologia.netlify.app" target="_blank">
+          Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
