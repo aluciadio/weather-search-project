@@ -78,7 +78,7 @@ a {
 
 .weather-temperature {
   font-size: 70px;
-  line-height: 70px;
+  line-height: 50px;
   font-weight: bold;
   margin-left: 15px;
 }
@@ -89,6 +89,6 @@ a {
 }
 
 .emoji-weather {
-  font-size: 25px;
-  margin-top: 20px;
+  width: 80px;
+  height: 80px;
 }
